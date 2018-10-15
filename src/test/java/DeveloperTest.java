@@ -38,5 +38,25 @@ public class DeveloperTest {
     public void payBonus(){
         assertEquals(150.00, dev.payBonus(), 0.01);
     }
-    
+
+
+    @Test
+    public void setName() {
+        dev.setName("Mr. Bob");
+        assertEquals("Mr. Bob", dev.getName());
+    }
+
+    @Test
+    public void nullName(){
+        dev.setName(null);
+        assertEquals("Dan", dev.getName());
+    }
+
+    @Test
+    public void negRaise() {
+        dev.raiseSalary(-100.00);
+        assertEquals(15000.00, dev.getSalary(), 0.01);
+    }
+
+
 }

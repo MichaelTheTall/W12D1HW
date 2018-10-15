@@ -30,8 +30,10 @@ public abstract class Employee {
     }
 
     public double raiseSalary(double raise){
-        salary += raise;
-        return salary;
+        if (raise >= 0) {
+            salary += raise;
+            return salary;
+        } else return salary;
     }
 
     public double payBonus(){

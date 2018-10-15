@@ -44,4 +44,22 @@ public class ManagerTest {
         assertEquals(200.00, manager.payBonus(), 0.01);
     }
 
+    @Test
+    public void setName() {
+        manager.setName("Mr. Bob");
+        assertEquals("Mr. Bob", manager.getName());
+    }
+
+    @Test
+    public void nullName(){
+        manager.setName(null);
+        assertEquals("Bob", manager.getName());
+    }
+
+    @Test
+    public void negRaise() {
+        manager.raiseSalary(-100.00);
+        assertEquals(20000.00, manager.getSalary(), 0.01);
+    }
+
 }

@@ -33,12 +33,29 @@ public class DatabaseAdminTest {
             admin.raiseSalary(2000.00);
             assertEquals(20000.00, admin.getSalary(), 0.01);
         }
-
         @Test
         public void payBonus(){
             assertEquals(180.00, admin.payBonus(), 0.01);
         }
 
+
+    @Test
+    public void setName() {
+        admin.setName("Mr. Bob");
+        assertEquals("Mr. Bob", admin.getName());
+    }
+
+    @Test
+    public void nullName(){
+        admin.setName(null);
+        assertEquals("Andrew", admin.getName());
+    }
+
+    @Test
+    public void negRaise() {
+        admin.raiseSalary(-100.00);
+        assertEquals(18000.00, admin.getSalary(), 0.01);
+    }
 
 
 

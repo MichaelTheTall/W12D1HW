@@ -49,4 +49,24 @@ public class DirectorTest {
         assertEquals(2000000.00, boss.getBudget(), 0.01);
     }
 
+
+    @Test
+    public void setName() {
+        boss.setName("Mr. Bob");
+        assertEquals("Mr. Bob", boss.getName());
+    }
+
+    @Test
+    public void nullName(){
+        boss.setName(null);
+        assertEquals("Mr. Boss", boss.getName());
+    }
+
+    @Test
+    public void negRaise() {
+        boss.raiseSalary(-100.00);
+        assertEquals(100000.00, boss.getSalary(), 0.01);
+    }
+
+
 }
