@@ -2,9 +2,9 @@ package staff;
 
 public abstract class Employee {
     private String name;
+
     private String NI;
     private double salary;
-
     public Employee(String name, String NI, double salary) {
         this.name = name;
         this.NI = NI;
@@ -14,6 +14,13 @@ public abstract class Employee {
     public String getName() {
         return name;
     }
+
+    public void setName(String name) {
+        if (name != null) {
+            this.name = name;
+        }
+    }
+
     public String getNI() {
         return NI;
     }
