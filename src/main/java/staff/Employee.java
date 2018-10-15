@@ -11,6 +11,17 @@ public abstract class Employee {
         this.salary = salary;
     }
 
+    public String getName() {
+        return name;
+    }
+    public String getNI() {
+        return NI;
+    }
+
+    public int getSalary() {
+        return salary;
+    }
+
 
 
 }
